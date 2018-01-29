@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionView should not render Accordion content when accordion is collapsed 1`] = `
+<div
+  className="Accordion"
+>
+  <button
+    onClick={[Function]}
+  >
+    Show
+  </button>
+  <CSSTransitionGroup
+    component={Symbol(react.fragment)}
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={500}
+    transitionName="Accordion__content"
+  />
+</div>
+`;
+
+exports[`AccordionView should render Accordion content when accordion is expanded 1`] = `
+<div
+  className="Accordion"
+>
+  <button
+    onClick={[Function]}
+  >
+    Hide
+  </button>
+  <CSSTransitionGroup
+    component={Symbol(react.fragment)}
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={500}
+    transitionName="Accordion__content"
+  >
+    <div
+      className="Accordion__content"
+    >
+      <span
+        id="dummy"
+      />
+    </div>
+  </CSSTransitionGroup>
+</div>
+`;

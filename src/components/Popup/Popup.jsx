@@ -1,7 +1,6 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-class Popup extends PureComponent {
+class Popup extends Component {
   state = { expanded: false }
 
   componentDidMount() {
@@ -10,6 +9,10 @@ class Popup extends PureComponent {
 
   componentWillUnmount() {
     document.removeEventListener('click', this.handleOutsideClick);
+  }
+
+  setRef = (node) => {
+    this.node = node;
   }
 
   handleOutsideClick = ({ target }) => {
@@ -21,13 +24,10 @@ class Popup extends PureComponent {
     this.setState(({ expanded }) => ({ expanded: !expanded }));
   }
 
-  setRef = (node) => {
-    this.node = node;
-  }
-
   render() {
     return (
       <span ref={this.setRef}>
+        <button onClick={() => this.setState({})}>abc</button>
         {this.props.children({
           expanded: this.state.expanded,
           toggle: this.toggle,

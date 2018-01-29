@@ -5,6 +5,9 @@ import Accordion from './components/Accordion/Accordion';
 import Popup from './components/Popup/Popup';
 
 class App extends Component {
+  componentDidMount() {
+    console.log(this.state);
+  }
   render() {
     return (
       <div className="App">
