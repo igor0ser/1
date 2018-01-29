@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Popup extends Component {
   state = { expanded: false }
@@ -27,7 +28,7 @@ class Popup extends Component {
   render() {
     return (
       <span ref={this.setRef}>
-        <button onClick={() => this.setState({})}>abc</button>
+        <button onClick={this.toggle}>abc</button>
         {this.props.children({
           expanded: this.state.expanded,
           toggle: this.toggle,
@@ -36,5 +37,9 @@ class Popup extends Component {
     );
   }
 }
+
+Popup.propTypes = {
+  children: PropTypes.func.isRequired,
+};
 
 export default Popup;

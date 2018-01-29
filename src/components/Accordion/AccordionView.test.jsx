@@ -17,7 +17,7 @@ describe('AccordionView', () => {
 
   it('should not render Accordion content when accordion is collapsed', () => {
     const comp = shallow((
-      <AccordionView toggle={noop}>
+      <AccordionView expanded={false} toggle={noop}>
         <span id="dummy" />
       </AccordionView>
     ));
