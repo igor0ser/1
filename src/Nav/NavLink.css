@@ -1,0 +1,21 @@
+.NavLink {
+  text-decoration: none;
+  color: #1c86ee;
+  padding: 6px;
+}
+
+.NavLink::after {
+  content: ' / ';
+}
+
+.NavLink:last-child::after {
+  content: none;
+}
+
+.NavLink :hover {
+  text-decoration: underline;
+}
+
+.NavLink_active {
+  border: 1px solid #1c86ee;
+}

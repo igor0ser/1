@@ -1,28 +1,23 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Nav from './Nav/Nav';
 import RecomposedAccordion from './RecomposedAccordion/RecomposedAccordion';
 import FuncChildrenPopup from './FuncChildrenPopup/FuncChildrenPopup';
 import Counter from './Counter/Counter';
 import './App.css';
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <div className="App">
-      <nav>
-        <ul className="AppNavList">
-          <li><Link to="/">Home</Link></li>
-          /
-          <li><Link to="/recomposed-accordion">Recomposed Accordion</Link></li>
-          /
-          <li><Link to="/func-children-popup">Functional Children</Link></li>
-          /
-          <li><Link to="/counter">Counter</Link></li>
-        </ul>
-      </nav>
+      <Nav
+        links={[
+          { to: '/', text: 'Home' },
+          { to: '/recomposed-accordion', text: 'Recomposed Accordion' },
+          { to: '/func-children-popup', text: 'Functional Children' },
+          { to: '/counter', text: 'Counter' },
+        ]}
+      />
+
 
       <hr />
 
@@ -31,7 +26,7 @@ const App = () => (
       <Route path="/func-children-popup" component={FuncChildrenPopup} />
       <Route path="/counter" component={Counter} />
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
