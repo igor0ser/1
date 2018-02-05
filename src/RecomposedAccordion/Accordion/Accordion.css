@@ -1,5 +1,6 @@
 .Accordion {
   padding: 10px;
+  perspective: 500px;
 }
 
 .Accordion button {
@@ -15,22 +16,22 @@
   border: 2px solid white;
   border-radius: 8px;
   transform-origin: top;
-  transition: transform 250ms;
+  transition: transform .5s;
 }
 
 /* aniimations */
 .Accordion__content-enter {
-  transform: scaleY(0);
+  transform: rotateX(-103.5deg);
 }
 
 .Accordion__content-enter-active {
-  transform: scaleY(100%);
+  transform: rotateX(0deg);
 }
 
 .Accordion__content-leave {
-  transform: translateY(0);
+  transform: rotateX(0deg);
 }
 
 .Accordion__content-leave-active {
-  transform: translateY(-500px);
+  transform: rotateX(-103.5deg);
 }

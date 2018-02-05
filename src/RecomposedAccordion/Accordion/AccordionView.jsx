@@ -10,8 +10,8 @@ const AccordionView = ({ children, expanded, toggle }) => (
     </button>
     <CSSTransitionGroup
       transitionName="Accordion__content"
-      transitionEnterTimeout={250}
-      transitionLeaveTimeout={250}
+      transitionEnterTimeout={600}
+      transitionLeaveTimeout={600}
       component={Fragment}
     >
       {expanded && (
