@@ -1,0 +1,36 @@
+.Accordion {
+  padding: 10px;
+}
+
+.Accordion button {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.Accordion__content {
+  display: flex;
+  padding: 20px;
+  color: white;
+  background-color: DarkSlateBlue;
+  border: 2px solid white;
+  border-radius: 8px;
+  transform-origin: top;
+  transition: transform 250ms;
+}
+
+/* aniimations */
+.Accordion__content-enter {
+  transform: scaleY(0);
+}
+
+.Accordion__content-enter-active {
+  transform: scaleY(100%);
+}
+
+.Accordion__content-leave {
+  transform: translateY(0);
+}
+
+.Accordion__content-leave-active {
+  transform: translateY(-500px);
+}

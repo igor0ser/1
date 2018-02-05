@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Popup.css';
 
 class Popup extends Component {
   state = { expanded: false }
@@ -26,13 +27,16 @@ class Popup extends Component {
   }
 
   render() {
+    const { expanded } = this.state;
+
     return (
       <span ref={this.setRef}>
         <button onClick={this.toggle}>abc</button>
-        {this.props.children({
-          expanded: this.state.expanded,
-          toggle: this.toggle,
-        })}
+        {expanded && (
+          <div className="Popup">
+            {this.props.children(this.toggle)}
+          </div>
+        )}
       </span>
     );
   }
