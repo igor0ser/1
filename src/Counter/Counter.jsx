@@ -1,31 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { increment, decrement, reset } from '../duck';
+import * as actions from './Counter.duck';
 
-const Counter = ({ counter = 1, _increment, _decrement, _reset }) => (
+const Counter = ({ counter = 1, increment, decrement, reset }) => (
   <div
     className="Counter"
   >
-    <button onClick={_decrement}>-</button>
-    <button onClick={_reset}>{counter}</button>
-    <button onClick={_increment}>+</button>
+    <button onClick={decrement}>-</button>
+    <button onClick={reset}>{counter}</button>
+    <button onClick={increment}>+</button>
   </div>
 );
 
 Counter.propTypes = {
   counter: PropTypes.number.isRequired,
-  _increment: PropTypes.func.isRequired,
-  _decrement: PropTypes.func.isRequired,
-  _reset: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+  reset: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = ({ counter }) => ({ counter });
 
-const mapDispatchToProps = {
-  _increment: increment,
-  _decrement: decrement,
-  _reset: reset,
-};
+const { increment, decrement, reset } = actions;
+const mapDispatchToProps = { increment, decrement, reset };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

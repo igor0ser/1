@@ -1,0 +1,13 @@
+@keyframes rotate {
+  from { transform: rotate(  0deg) }
+  from { transform: rotate(360deg) }
+}
+
+.FetchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.FetchButton:disabled .fa {
+  animation: rotate 1s infinite linear;
+}

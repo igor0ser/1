@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Error.css';
 
-const ErrorComp = ({ message }) => (
+const Err = ({ message }) => (
   <div className="Error">
     <i className="fa fa-meh-o" />
     Oops, error happened.{' '}
@@ -10,8 +10,8 @@ const ErrorComp = ({ message }) => (
   </div>
 );
 
-ErrorComp.propTypes = {
+Err.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-export default ErrorComp;
+export default Err;

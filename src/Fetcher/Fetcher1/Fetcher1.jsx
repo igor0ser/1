@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import Loader from '../Loader/Loader';
 import User from '../User/User';
-import ErrorComp from '../Error/Error';
+import Err from '../Error/Error';
+import FetchButton from '../FetchButton/FetchButton';
 import fetchUsers from '../fetchUsers';
 
 class Fetcher1 extends PureComponent {
@@ -26,7 +27,7 @@ class Fetcher1 extends PureComponent {
   renderFetchResult() {
     const { fetchState } = this.state;
     if (fetchState === 'loading') return <Loader />;
-    if (fetchState.errMessage) return <ErrorComp message={fetchState.errMessage} />;
+    if (fetchState.errMessage) return <Err message={fetchState.errMessage} />;
 
     return fetchState.map(user => <User {...user} key={user.email} />);
   }
@@ -34,11 +35,11 @@ class Fetcher1 extends PureComponent {
   render() {
     return (
       <div className="Fetcher1">
-        <h3>Fetching in React Component</h3>
-        <button onClick={() => this.fetchData()}>
-          refetch&nbsp;
-          <i className="fa fa-refresh" />
-        </button>
+        <h3>Fetching in React Component. All steps are saved in fetchState</h3>
+        <FetchButton
+          onClick={() => this.fetchData()}
+          fetching={this.state.fetchState === 'loading'}
+        />
         <br />
         {this.renderFetchResult()}
       </div>
