@@ -10,6 +10,7 @@ const Nav = ({ links }) => (
         <NavLink key={to} to={to} text={text} />
       ))}
     </ul>
+    <hr />
   </nav>
 );
 

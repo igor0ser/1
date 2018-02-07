@@ -9,7 +9,7 @@ const initState = {
   error: null,
 };
 
-class Fetcher1 extends PureComponent {
+class Fetcher2 extends PureComponent {
   state = initState
 
   componentDidMount() {
@@ -30,7 +30,7 @@ class Fetcher1 extends PureComponent {
     const { error, fetching, data } = this.state;
 
     return (
-      <div className="Fetcher1">
+      <div className="Fetcher2">
         <h3>Fetching in React Component</h3>
         <FetchButton
           onClick={() => this.fetchData()}
@@ -48,4 +48,4 @@ class Fetcher1 extends PureComponent {
 }
 
 
-export default Fetcher1;
+export default Fetcher2;

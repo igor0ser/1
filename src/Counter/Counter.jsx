@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from './Counter.duck';
 
 const Counter = ({ counter = 1, increment, decrement, reset }) => (
-  <div
-    className="Counter"
-  >
+  <div className="Counter">
     <button onClick={decrement}>-</button>
     <button onClick={reset}>{counter}</button>
     <button onClick={increment}>+</button>
