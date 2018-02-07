@@ -1,0 +1,21 @@
+.LoaderWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.loader {
+  transform: scale(1.25);
+}
+
+.ball-clip-rotate-multiple div:first-child{
+  border-color: transparent var(--main-color) transparent var(--main-color);
+  left: 0;
+  top: 0;
+}
+
+.ball-clip-rotate-multiple div:last-child{
+  border-color: transparent var(--main-color) transparent var(--main-color);
+  left: 10px;
+  top: 10px;
+}

@@ -1,7 +1,9 @@
 .NavLink {
+  display: block;
+  padding: 4px 6px;
   text-decoration: none;
-  color: #1c86ee;
-  padding: 6px;
+  color: var(--main-color);
+  border: 1px solid transparent;
 }
 
 .NavLink::after {
@@ -17,5 +19,5 @@
 }
 
 .NavLink_active {
-  border: 1px solid #1c86ee;
+  border-color: var(--main-color);
 }

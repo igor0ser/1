@@ -4,6 +4,7 @@ import Nav from './Nav/Nav';
 import RecomposedAccordion from './RecomposedAccordion/RecomposedAccordion';
 import FuncChildrenPopup from './FuncChildrenPopup/FuncChildrenPopup';
 import Counter from './Counter/Counter';
+import Fetcher from './Fetcher/Fetcher';
 import './App.css';
 
 const App = () => (
@@ -15,6 +16,7 @@ const App = () => (
           { to: '/recomposed-accordion', text: 'Recomposed Accordion' },
           { to: '/func-children-popup', text: 'Functional Children' },
           { to: '/counter', text: 'Counter' },
+          { to: '/fetcher', text: 'Fetcher' },
         ]}
       />
 
@@ -25,6 +27,7 @@ const App = () => (
       <Route path="/recomposed-accordion" component={RecomposedAccordion} />
       <Route path="/func-children-popup" component={FuncChildrenPopup} />
       <Route path="/counter" component={Counter} />
+      <Route path="/fetcher" component={Fetcher} />
     </div>
   </BrowserRouter>
 );
