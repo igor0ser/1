@@ -3,6 +3,10 @@
   from { transform: rotate(360deg) }
 }
 
+.FetchButton {
+  margin-bottom: 16px;
+}
+
 .FetchButton:disabled {
   opacity: 0.5;
   cursor: not-allowed;

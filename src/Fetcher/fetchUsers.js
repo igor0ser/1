@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 async function fetchUser() {
-  const url = Math.random() < 0.1 ? 'fail' : 'https://randomuser.me/api/';
+  const url = Math.random() < 0.03 ? 'https://FAIL' : 'https://randomuser.me/api/';
   const resp = await axios.get(url);
   return resp.data.results[0];
 }
