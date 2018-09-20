@@ -5,7 +5,9 @@ import RecomposedAccordion from './RecomposedAccordion/RecomposedAccordion';
 import FuncChildrenPopup from './FuncChildrenPopup/FuncChildrenPopup';
 import Counter from './Counter/Counter';
 import Fetcher from './Fetcher/Fetcher';
+import Home from './Home/Home';
 import './App.css';
+
 
 const App = () => (
   <BrowserRouter>
@@ -20,7 +22,7 @@ const App = () => (
         ]}
       />
       <Switch>
-        <Route exact path="/" component={() => 'home'} />
+        <Route exact path="/" component={Home} />
         <Route path="/recomposed-accordion" component={RecomposedAccordion} />
         <Route path="/func-children-popup" component={FuncChildrenPopup} />
         <Route path="/counter" component={Counter} />
